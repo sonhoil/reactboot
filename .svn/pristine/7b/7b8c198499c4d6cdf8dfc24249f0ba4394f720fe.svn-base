@@ -1,4 +1,0 @@
-spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
-spring.datasource.url=jdbc:sqlserver://localhost:1433;databaseName=ChurchDB
-spring.datasource.username=test
-spring.datasource.password=1234
