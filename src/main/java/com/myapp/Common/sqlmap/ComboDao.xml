@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myapp.Common.Dao.ComboDao">
+	<select id="ChurchAreaList" resultType="java.util.Map" parameterType="java.util.Map">
+	SELECT 
+	AREA
+	FROM [ChurchDB].[dbo].[T_ChurchList] GROUP BY AREA ORDER BY convert(decimal,SUBSTRING(AREA,2,2))
+	</select>
+
+	<select id="ChurchList" resultType="java.util.Map" parameterType="java.util.Map">
+	SELECT
+	CHURCH
+	FROM [ChurchDB].[dbo].[T_ChurchList] WHERE AREA = #{area}
+	</select>
+
+	<select id="ChurchNameSearch" resultType="java.util.Map" parameterType="java.util.Map">
+	SELECT  TOP (250)
+       Cname
+      ,Birth
+      ,Identi
+   FROM [ChurchDB].[dbo].[T_ChurchNameList]
+   WHERE Cname LIKE '%' + #{search} + '%'
+   ORDER BY CONVERT (DATETIME, CONCAT('1970-',REPLACE(REPLACE(BIRTH,'월','-'),'일','')))
+  
+	</select>
+</mapper>

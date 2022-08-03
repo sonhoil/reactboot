@@ -1,0 +1,111 @@
+.borderBox{
+    border: 1px solid #dbdbdb;
+}
+.borderBox_b{
+    border-bottom: 1px solid #dbdbdb;
+}
+.borderBox_tb{
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+}
+.hr-sect {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.35);
+    font-size: 12px;
+    margin: 8px 0px;
+    margin-top: 20px;
+  }
+  .hr-sect::before,
+  .hr-sect::after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.35);
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 16px;
+  }
+
+.tag{
+    width: 30px;
+    
+}  
+
+
+
+
+
+
+.FlexRow{
+    display: flex;
+    flex-direction: row;
+}
+.FlexRow_jc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.FlexRow_ac{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.FlexRow_c{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.FlexCol{
+    display: flex;
+    flex-direction: column;
+}
+.FlexCol_c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.FlexCol_ac{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.FlexCol_jc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tag{
+   /* background-color: black;*/
+    color: rgb(40, 135, 243);
+    font-weight: 900;
+
+   /* border: 2px solid gray;*/
+    padding: 3px;
+    margin: 3px;
+    width: auto;
+}
+
+p{margin: 0;}
+
+
+nav ul{
+    list-style:none;
+    padding-left:0px;
+    display: flex;
+}
+
+nav ul li{
+  margin: 3px;
+  
+}
+
+.App {
+    text-align: center;
+    height: 20px;
+  }

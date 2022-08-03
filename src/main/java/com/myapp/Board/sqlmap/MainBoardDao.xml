@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myapp.Board.Dao.MainBoardDao">
+	<select id="WriteBoard" resultType="java.util.Map" parameterType="java.util.Map">
+		INSERT INTO [ChurchDB].[dbo].[T_MAIN_BOARD]
+		(
+			[USERID]
+      		,[TITLE]
+      		,[CONTEXT]
+      		,[LIKECNT]
+      		,[REPLYCNT]
+      		,[FILENAME]
+      		,[TAG]
+      		)
+      		VALUES (
+      		'test',
+      		'test',
+      		#{comment},
+      		0,
+      		0,
+      		#{FileNames},
+      		#{tag}
+      		)
+      		
+	</select>
+	
+	<select id="getBoard" resultType="java.util.Map" parameterType="java.util.Map">
+	 	 SELECT 
+ 				TMB.BoardNum,
+ 				TMB.USERID,
+  				TMB.CONTEXT,
+  				TMB.FILENAME,
+  				TMB.tag,
+  				TMBL.BoardNum as LIKECHECK,
+  				LIKECNT2 = (SELECT COUNT(*) FROM [ChurchDB].[dbo].[T_MAIN_BOARD_LIKY] WHERE BoardNum = TMB.BoardNum),
+  				REPLYCNT = (SELECT COUNT(*) CONTEXT FROM [ChurchDB].[dbo].[T_MAIN_REPLY] WHERE BoardNum = TMB.BoardNum)
+  			FROM [ChurchDB].[dbo].[T_MAIN_BOARD] TMB
+  			LEFT JOIN [ChurchDB].[dbo].[T_MAIN_BOARD_LIKY] TMBL
+  			ON TMB.BoardNum = TMBL.BoardNum
+  			ORDER BY TMB.BoardNum desc
+	</select>
+	<insert id="LikeBoard"  parameterType="java.util.Map">
+		INSERT INTO [ChurchDB].[dbo].[T_MAIN_BOARD_LIKY]
+			([BoardNum],[USERID]) VALUES ( #{BoardNum}, 'test' )
+	</insert>
+	<delete id="UnLikeBoard" parameterType="java.util.Map">
+		DELETE FROM [ChurchDB].[dbo].[T_MAIN_BOARD_LIKY] WHERE BoardNum = #{BoardNum} and USERID = 'test'
+	</delete>
+	<insert id="WriteReply" parameterType="java.util.Map">
+		INSERT INTO [ChurchDB].[dbo].[T_MAIN_REPLY]
+			([BoardNum]
+      		,[USERID]
+      		,[CONTEXT]
+      		,[REPLYREF])
+      		 VALUES ( #{BoardNum}, 'test',#{ReplyContext},#{refNum})
+	</insert>
+	<select id="getReply" parameterType="java.util.Map" resultType="java.util.Map" >
+		SELECT  *
+  			FROM [ChurchDB].[dbo].[T_MAIN_REPLY]
+  			WHERE BoardNum = #{BoardNum}
+	</select>
+</mapper>
