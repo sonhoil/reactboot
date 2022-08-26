@@ -11,10 +11,10 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 @SpringBootApplication
-public class MyAppBackendApplication {
+public class reactbootApplication {
 	 
 	public static void main(String[] args) {
-		SpringApplication.run(MyAppBackendApplication.class, args);
+		SpringApplication.run(reactbootApplication.class, args);
 	}
 	@Bean
 	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {

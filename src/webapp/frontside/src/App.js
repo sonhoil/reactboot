@@ -1,5 +1,6 @@
 import React from 'react';
 import './resources/Css/commonUse.css';
+import './resources/Css/headerNav.css';
 import  SignIn from './Screen/USER/SignIn'
 import  SignUp from './Screen/USER/SignUp'
 import  SignUpDetail from './Screen/USER/SignUpDetail'
@@ -17,7 +18,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav class="borderBox_b">
+        {/* <nav class="borderBox_b">
           <ul>
             <li>
               <Link to="/MainBoard">홈</Link>
@@ -32,7 +33,55 @@ function App() {
               <Link to="/WriteMain">글작성</Link>
             </li>
           </ul>
-        </nav>
+        </nav> */}
+<div class="header">
+  <div class="gnb">
+    <ul>
+      <li>
+        <Link to="/SignIn">1차 메뉴 1</Link>
+        <div>
+          <ul>
+            <li><Link to="/SignIn">2차메뉴</Link></li>
+            <li><Link to="/SignIn">2차메뉴</Link></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <Link to="/SignIn">1차 메뉴 2</Link>
+      <div>
+          <ul>
+            <li><Link to="/SignIn">2차메뉴</Link></li>
+            <li><Link to="/SignIn">2차메뉴</Link></li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <Link to="/SignIn">1차 메뉴 3</Link>
+			<div>
+          <ul>
+             <li>
+             <Link to="/SignIn">2차메뉴</Link>
+                <ul>
+                  <li> <Link to="/SignIn">3차메뉴</Link></li>
+                </ul>
+              </li>
+          </ul>
+          <ul>
+             <li>
+             <Link to="/SignIn">2차메뉴</Link>
+                <ul>
+                  <li> <Link to="/SignIn">3차메뉴</Link></li>
+                </ul>
+              </li>
+          </ul>
+	    </div>
+      </li>
+    </ul>
+  </div>
+</div>
+ 
+
 
         {/* <Switch>는 하위 <Route>들을 살펴보고 현재 URL과 일치하는 첫 번째 경로를 렌더링합니다. */}
         <Switch>

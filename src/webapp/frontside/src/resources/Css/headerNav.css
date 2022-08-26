@@ -1,0 +1,39 @@
+
+/* reset */
+* {margin: 0; padding: 0;/* box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -o-text-size-adjust: none;*/}
+
+body {line-height: 1; margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ""; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+a {text-decoration: none; color: inherit;}
+
+
+/* common */
+p, th, td, input, select, textarea, button, a, h1, h2, h3, li, span, strong, label {font-family: "NotoKrR", sans-serif;}
+legend, caption {font-size: 0; overflow: hidden; text-indent: -9999px; width: 0; height: 0; line-height: 0;}
+input[type="text"]::-ms-clear {display: none;}
+input[type="text"], input[type="password"], input[type="search"], select {border-radius: 0; outline-style: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; border: 0;}
+button, [type="button"], [type="reset"], [type="submit"] {background: none; border-radius: 0; border: 0; padding: 0; margin: 0; -webkit-appearance: none; -moz-appearance: none; appearance: none; cursor: pointer;}
+/*input[type="file"] {position: absolute;   width: 1px;   height: 1px; padding: 0; margin: -1px; overflow: hidden; clip:rect(0,0,0,0); border: 0;}
+*/
+/* Header */
+.header {background-color: #fff; border-bottom: 1px solid #eee; height: 60px; width: 100%; display: -webkit-box; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; position: fixed; top: 0; z-index: 999;}
+.header .gnb {padding-left: 25px;;}
+.header .gnb > ul {display: -webkit-box; display: flex; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: center; align-items: center; width: 100%; position: relative; background-color: #fff;}
+.header .gnb > ul > li {position: relative; padding: 10px 0px;}
+.header .gnb > ul > li > a {font-size: 16px; color: #222222; display: inline-block; height: 40px; line-height: 40px; padding: 0 20px; -webkit-transition: 0.35s; transition: 0.35s;}
+.header .gnb > ul > li:hover > a {border-radius: 5px; background-color: #89cff0; color: #fff; height: 40px; line-height: 40px; -webkit-transition: 0.35s; transition: 0.35s;}
+.header .gnb > ul > li > div {display: none; z-index: 99; -webkit-transition: 0.35s; transition: 0.35s; }
+.header .gnb > ul > li:hover > div {display: block; position: absolute; top: 55px; left: 50%; transform: translateX(-50%); -webkit-transition: 0.35s; transition: 0.35s; display: -webkit-box; display: flex; -webkit-justify-content: flex-start; justify-content: flex-start; -webkit-align-items: stretch; align-items: stretch; background-color: #fff; border: 1px solid #eee; border-radius: 4px; box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.07);}
+.header .gnb > ul > li:hover > div > ul {min-width: 190px; padding: 8px 0px 8px 0;}
+.header .gnb > ul > li:hover > div > ul:not(:last-child) {border-right: 1px solid #eee;}
+.header .gnb > ul > li > div > ul > li > a {display: block; font-size: 15px; color: #222222; height: 35px; line-height: 35px; -webkit-transition: all .35s ease; transition: all .35s ease; padding-left: 27px; width: calc(100% - 27px);}
+.header .gnb > ul > li > div > ul > li > a:hover {color: #64c1ed; background-color: #fafafa; -webkit-transition: all .35s ease; transition: all .35s ease;}
+.header .gnb > ul > li > div > ul > li > ul > li a {font-size: 14px; color: #555555; display: inline-block; position: relative; padding-left: 38px; height: 30px; line-height: 30px; width: calc(100% - 38px); -webkit-transition: all .35s ease; transition: all .35s ease;}
+.header .gnb > ul > li > div > ul > li > ul > li a:before {content: ""; position: absolute; top: 15px; left: 30px; width: 2px; height: 2px; background-color: #555555;}
+.header .gnb > ul > li > div > ul > li > ul > li a:hover {color: #64c1ed; background-color: #fafafa; -webkit-transition: all .35s ease; transition: all .35s ease;}
+.header .gnb > ul > li > div > ul > li > ul > li a:hover:before {background-color: #64c1ed;}
