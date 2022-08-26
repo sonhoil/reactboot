@@ -36,7 +36,7 @@ function About() {
     
         <div class="FlexCol_ac" style={{width:"50%",height:"100%",margin:"auto"}}>
             <div class="borderBox" style={{backgroundColor:"white",width: "80%",height: "60%",marginBottom: "50px",marginTop: "50px" ,display: "flex",flexDirection: "column", alignItems: "center"}}>
-               <h3>신림성모 SNS</h3>
+               <h3>신림성모 SNS </h3> 
                <div style={{width:"80%"}}>
                 
                         <div class="FlexCol" style={{width:"100%"}}>

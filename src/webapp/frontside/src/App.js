@@ -7,6 +7,7 @@ import  SignUpDetail from './Screen/USER/SignUpDetail'
 import  MainBoard from './Screen/BOARD/MainBoard'
 import  Users from './Screen/Users'
 import  WriteMain from './Screen/BOARD/WriteMain'
+import  Header from './Screen/Header'
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,52 +35,7 @@ function App() {
             </li>
           </ul>
         </nav> */}
-<div class="header">
-  <div class="gnb">
-    <ul>
-      <li>
-        <Link to="/SignIn">1차 메뉴 1</Link>
-        <div>
-          <ul>
-            <li><Link to="/SignIn">2차메뉴</Link></li>
-            <li><Link to="/SignIn">2차메뉴</Link></li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <Link to="/SignIn">1차 메뉴 2</Link>
-      <div>
-          <ul>
-            <li><Link to="/SignIn">2차메뉴</Link></li>
-            <li><Link to="/SignIn">2차메뉴</Link></li>
-          </ul>
-        </div>
-      </li>
-
-      <li>
-        <Link to="/SignIn">1차 메뉴 3</Link>
-			<div>
-          <ul>
-             <li>
-             <Link to="/SignIn">2차메뉴</Link>
-                <ul>
-                  <li> <Link to="/SignIn">3차메뉴</Link></li>
-                </ul>
-              </li>
-          </ul>
-          <ul>
-             <li>
-             <Link to="/SignIn">2차메뉴</Link>
-                <ul>
-                  <li> <Link to="/SignIn">3차메뉴</Link></li>
-                </ul>
-              </li>
-          </ul>
-	    </div>
-      </li>
-    </ul>
-  </div>
-</div>
+      <Header/>
  
 
 
