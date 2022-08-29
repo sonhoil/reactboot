@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Carousel from 'react-bootstrap/Carousel'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 import '../../resources/Css/InputDesign.css';
 import '../../resources/Css/Mainboard.css';
 import axios,{ post } from 'axios';
 import DetailPopup from './DetailPopup';
-import { Button,InputGroup ,FormControl  } from 'react-bootstrap';
+
 import { IoRemoveCircle } from "react-icons/io5";
 import {useHistory} from "react-router-dom"
 function WriteMain() {
@@ -119,38 +119,7 @@ function WriteMain() {
   } 
     return (
       <div class="FlexRow_c">
-      <div class="FlexCol_c">
-        <input type="file" id="file" style={{display:'none'}} onChange={handleChangeFile} multiple="multiple" />
-        <label for="file" class="FlexCol_c" style={{border:'2px solid black',width:'700px',height:'300px',marginTop:'100px',fontSize:'40px'}}><strong>FILE UPLOAD <br/> Click here!</strong></label>
-        <div  class="outer-input FlexRow_ac" style={{minHeight:'70px',width:'700px',padding:'0px',textAlign:'left',overflow:'auto'}}>
-        <input class="innerinput" id="innerinput" style={{border:'0px',height:'30px',width:'120px',paddingLeft:'12px'}} placeholder="#tag" onKeyPress={setTags}></input>
-          {tag.map(((item,index) => {
-              return (<span><span class='tag'>{item}</span><IoRemoveCircle onClick={() => deleteTag(index)} class="delete"  style={{color:"red",fontSize:"20px"}}/></span>)
-          }))}
-        </div>
-        <textarea name="text" class="feedback-input borderBox" id="comment" placeholder="Comment" style={{resize:'none'}} onChange={setComments}></textarea>
-        <button onClick={WriteBoard} style={{border:'2px solid black',width:'700px',fontSize:'40px'}}>작성완료</button>
-      </div>
-      <div class="borderBox" style={{width:'700px', height:"560px",marginTop:'100px',marginLeft:'60px',border:'2px solid black'}}>
-      <Carousel interval={null}>
-      {imgBase64.map((item) => {
-       return(
-        <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={item}
-          alt="First slide"
-          style={{width:"100%",height:"550px"}}
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-       )
-      }) }
-</Carousel>
-      </div>
+    
       </div>
     );
   }

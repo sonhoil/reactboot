@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.12.3",
+    "@material-ui/icons": "^4.11.3",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.2",
     "@svgr/webpack": "5.4.0",
     "@testing-library/jest-dom": "^5.11.6",
@@ -53,7 +54,6 @@
     "prompts": "2.4.0",
     "react": "^17.0.1",
     "react-app-polyfill": "^2.0.0",
-    "react-bootstrap": "^1.4.3",
     "react-calendar": "^3.2.1",
     "react-datepicker": "^3.3.0",
     "react-dev-utils": "^11.0.1",
