@@ -13,7 +13,7 @@ function Header() {
     if (locationNow.pathname === "/SignIn") return null; //특정 페이지에서 안나오도록 처리
 
     return (
-        <div class="header">
+      <div class="contents_area">
         <div class="gnb">
           <ul>
             <li>

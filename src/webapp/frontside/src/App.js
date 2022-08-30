@@ -8,6 +8,8 @@ import  MainBoard from './Screen/BOARD/MainBoard'
 import  Users from './Screen/Users'
 import  WriteMain from './Screen/BOARD/WriteMain'
 import  Header from './Screen/Header'
+import  LeftLink from './Screen/Common/LeftLink'
+import  LeftStatus from './Screen/Common/LeftStatus'
 import {
   BrowserRouter as Router,
   Switch,
@@ -35,18 +37,19 @@ function App() {
             </li>
           </ul>
         </nav> */}
+      
+     
+        <LeftLink/>
+        <LeftStatus/>
       <Header/>
- 
-
+  
 
         {/* <Switch>는 하위 <Route>들을 살펴보고 현재 URL과 일치하는 첫 번째 경로를 렌더링합니다. */}
         <Switch>
           <Route path="/SignIn">
             <SignIn />
           </Route>
-          <Route path="/SignUp">
-            <SignUp/>
-          </Route>
+         
           <Route path="/SignUpDetail/:classify"
            render={(props) => (
             <SignUpDetail {...props} isAuthed={true} />
@@ -68,6 +71,9 @@ function App() {
           </Route>
          
         </Switch>
+
+
+        
       </div>
     </Router>
   );
