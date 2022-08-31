@@ -17,8 +17,8 @@ function LeftLink() {
         <div>
             <ul>
                 <li><a href="/" title="HOME"><i class="mdi mdi-home"></i><p>HOME</p></a></li>
-                <li><a href="javascript:openConfigWin();" title="마이페이지"><i class="mdi mdi-card-account-details"></i><p>마이페이지</p></a></li>
-                <li><a href="javascript:logoff();" title="로그아웃"><i class="mdi mdi-lock-open"></i><p>로그아웃</p></a></li>
+                <li><a href="" title="마이페이지"><i class="mdi mdi-card-account-details"></i><p>마이페이지</p></a></li>
+                <li><a href="" title="로그아웃"><i class="mdi mdi-lock-open"></i><p>로그아웃</p></a></li>
             </ul>
         </div>
         <div>
@@ -36,11 +36,11 @@ function LeftLink() {
         <div>
             <ul>
                 
-                <li><a href="javascript:goOnlineBudget('A005003');" title="예산 관리"><i class="mdi mdi-shape-plus"></i><p>예산 관리</p></a></li>
-                <li><a href="javascript:openCredit();" title="법인 카드"><i class="mdi mdi-credit-card-outline"></i><p>법인 카드</p></a></li>
+                <li><a href="javascript:" title="예산 관리"><i class="mdi mdi-shape-plus"></i><p>예산 관리</p></a></li>
+                <li><a href="javascript:" title="법인 카드"><i class="mdi mdi-credit-card-outline"></i><p>법인 카드</p></a></li>
                 
-                <li><a href="javascript:openSchedule();" title="개인 일정"><i class="mdi mdi-calendar-month"></i><p>개인 일정</p></a></li>
-                <li><a href="javascript:openEp();" title="비상연락망"><i class="mdi mdi-contacts"></i><p>비상연락망</p></a></li>
+                <li><a href="javascript:" title="개인 일정"><i class="mdi mdi-calendar-month"></i><p>개인 일정</p></a></li>
+                <li><a href="javascript:;" title="비상연락망"><i class="mdi mdi-contacts"></i><p>비상연락망</p></a></li>
             </ul>
         </div>
     </div>  

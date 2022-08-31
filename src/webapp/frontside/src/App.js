@@ -1,6 +1,5 @@
 import React from 'react';
-import './resources/Css/commonUse.css';
-import './resources/Css/headerNav.css';
+
 import  SignIn from './Screen/USER/SignIn'
 import  SignUp from './Screen/USER/SignUp'
 import  SignUpDetail from './Screen/USER/SignUpDetail'
@@ -10,6 +9,9 @@ import  WriteMain from './Screen/BOARD/WriteMain'
 import  Header from './Screen/Header'
 import  LeftLink from './Screen/Common/LeftLink'
 import  LeftStatus from './Screen/Common/LeftStatus'
+import './resources/Css/common.css';
+import './resources/Css/commonUse.css';
+import './resources/Css/headerNav.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -41,9 +43,10 @@ function App() {
      
         <LeftLink/>
         <LeftStatus/>
+        <div class="contents_area">
       <Header/>
-  
-
+      
+      <div class="contents">
         {/* <Switch>는 하위 <Route>들을 살펴보고 현재 URL과 일치하는 첫 번째 경로를 렌더링합니다. */}
         <Switch>
           <Route path="/SignIn">
@@ -71,8 +74,8 @@ function App() {
           </Route>
          
         </Switch>
-
-
+          </div>
+          </div>
         
       </div>
     </Router>

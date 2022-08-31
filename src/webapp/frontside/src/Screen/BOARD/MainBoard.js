@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-import '../../resources/Css/Mainboard.css';
+
 import DetailPopup from './DetailPopup';
 import axios,{ post } from 'axios';
 
